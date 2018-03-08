@@ -2,5 +2,48 @@ body{
     margin: 0;
 }
 #engine{
-    width: 100%;   
+    margin-top: 0;
+    width: 100%;
+    height: 400px;
+    background-image: url(../images/h-banner.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;  
+}
+.container{
+    max-width: 1170px;
+    margin: 0 auto;
+    padding: 0px 15px;
+    box-sizing: border-box;
+    overflow: auto;
+ }
+.logo img{
+    margin-top: 20px;
+    height: 240px;
+    width: 240px;
+}
+.find-lap-txt{
+    height: 55px;
+    font-size: 14px;
+    padding-right: 10px;
+    padding-left: 35px;
+    border-radius: 2px;
+    background: url(../images/search.png) no-repeat left center #fff;
+    width: 100%;
+    box-shadow: none;
+    transition: all 0.3s;
+    cursor: text;
+    display: inline-block;
+    text-align: start;
+    box-sizing: border-box;
+}
+.find-lap-btn{
+    font-size: 16px;
+    font-weight: 600;
+    height: 55px;
+    border-radius: 2px;
+    position: relative;
+    cursor: pointer;
+    background: #263a78;
 }
