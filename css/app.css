@@ -25,25 +25,51 @@ body{
 }
 .find-lap-txt{
     height: 55px;
+    width: 80%;
     font-size: 14px;
     padding-right: 10px;
     padding-left: 35px;
     border-radius: 2px;
     background: url(../images/search.png) no-repeat left center #fff;
-    width: 100%;
     box-shadow: none;
     transition: all 0.3s;
     cursor: text;
     display: inline-block;
     text-align: start;
     box-sizing: border-box;
+    display: inline;
 }
 .find-lap-btn{
+    height: 55px;
+    display: inline;
     font-size: 16px;
     font-weight: 600;
-    height: 55px;
     border-radius: 2px;
     position: relative;
     cursor: pointer;
     background: #263a78;
+    color: #fff
+}
+.theText{
+    text-justify: auto;
+    color: azure;
+    font-family: 'Arial';
+    font-size: 30px;
+    font-weight: bold;
+}
+#footer{
+   margin: 0px;
+}
+#main-footer{
+    height: 100px;
+    padding: 100px 0;
+    text-align: center;
+    background: #1c1c1c;
+}
+#main-footer p{
+    color: #bbb;
+    font-size: 14px;
+    margin: 6px 0;
+    font-weight: bold;
+    font-size: 40px;
 }
