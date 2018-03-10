@@ -73,3 +73,38 @@ body{
     font-weight: bold;
     font-size: 40px;
 }
+.item{
+    display: flex;
+    flex-direction: row;
+}
+.laps-list img{
+    padding: 2px;
+    height: 150px;
+    width: 150px;
+}
+.imgContent {
+    flex: 1;
+    display: inline-block;
+    margin: auto;
+}
+.infoContent{
+    flex: 2;
+    display: inline-block;
+    margin: 0 auto auto 0;
+}
+ul{
+    padding: 0;
+    margin: 10px 0;
+    text-align: left;
+    list-style: none;	
+}
+li{
+    width: 70%;
+    margin: 0 auto;
+    padding: 10px 10px 10px 40px;
+    background: #fff;
+    cursor: pointer;
+    border-bottom: 1px dashed #bbb;
+    font-size: 22px;
+    position: relative;
+}
