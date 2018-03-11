@@ -35,9 +35,9 @@ btn.addEventListener("click" , function(){
          if(list[i].name == input.value){
             itemExists = true;
             displayItem(list[i]);
-            input.value = "";
-            showingList.push(showingList[i]);
-            localStorage["laps"] = JSON.stringify(showingList); 
+            showingList.push(list[i]);
+            localStorage["laps"] = JSON.stringify(showingList);
+            input.value = ""; 
         }
      }
      if (!itemExists){
@@ -47,23 +47,25 @@ btn.addEventListener("click" , function(){
 });
 
 function displayItem(opjectItem){
-    var theItem =  "<li>";
-    theItem += "<div class=\"item\">";
-    theItem += "<div class=\"imgContent\">";
-    theItem += "<img alt=\"" + opjectItem["name"] + "\" src=\"" + opjectItem["photo"] + "\" />"
-    theItem += "</div>";
-    theItem += "<div class=\"infoContent\">";
-    theItem += "<div class=\"nameLine\">" + opjectItem["name"] + "</div>";
-    theItem += "<div class=\"priceLine\">" + opjectItem["price"] + " $</div>";
-    var productAvailability = "";
-    if(list[i]["isAvailable"]){
+    if (opjectItem != null) {
+     var theItem =  "<li>";
+     theItem += "<div class=\"item\">";
+     theItem += "<div class=\"imgContent\">";
+     theItem += "<img alt=\"" + opjectItem["name"] + "\" src=\"" + opjectItem["photo"] + "\" />"
+     theItem += "</div>";
+     theItem += "<div class=\"infoContent\">";
+     theItem += "<div class=\"nameLine\">" + opjectItem["name"] + "</div>";
+     theItem += "<div class=\"priceLine\">" + opjectItem["price"] + " $</div>";
+     var productAvailability = "";
+     if(opjectItem["isAvailable"]){
         productAvailability = "This product is available";
-    } else {
+     } else {
         productAvailability = "This product is not available for now try again later";
-    }
-    theItem += "<div class=\"availabilityLine\"><p>" + productAvailability + "</p></dic>";
-    theItem += "</div></div></li>";
-    lapsList.innerHTML  += theItem;
+     }
+     theItem += "<div class=\"availabilityLine\"><p>" + productAvailability + "</p></dic>";
+     theItem += "</div></div></li>";
+     lapsList.innerHTML  += theItem;
+   }
 }
 
 input.addEventListener("click", function() {
@@ -85,7 +87,10 @@ window.addEventListener('click', function(){
     }
 });
 
-/*if ("laps" in localStorage){
+if ("laps" in localStorage){
     var loadedItems = localStorage.getItem("laps");
     showingList = JSON.parse(loadedItems);
-}*/
+    for (var i = 0; i < showingList.length; i++){
+        displayItem(showingList[i]);
+    }
+}
