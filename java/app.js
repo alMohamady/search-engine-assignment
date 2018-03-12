@@ -68,8 +68,8 @@ function displayItem(opjectItem){
    }
 }
 
-input.addEventListener("click", function() {
-    if(event.keyCode === 3){
+input.addEventListener("keydown", function() {
+    if(event.keyCode === 13){
           btn.click();
     }
 });
